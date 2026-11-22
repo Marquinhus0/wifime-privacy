@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade / Privacy Policy — WifiMe</title>
+  <style>
+    :root {
+      --primary: #20A779;
+      --primary-dark: #167B5A;
+      --bg: #F4F7F7;
+      --surface: #FFFFFF;
+      --text: #17232B;
+      --muted: #55656E;
+      --border: #DCE5E5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101820;
+        --surface: #1B2A32;
+        --text: #F2F7F7;
+        --muted: #A3B3BA;
+        --border: #2B3E48;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header {
+      background: #101820;
+      color: #FFFFFF;
+      border-bottom: 4px solid var(--primary);
+      padding: 2rem 1.25rem;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    header h1 {
+      margin: 0 0 0.25rem;
+      font-size: 1.75rem;
+    }
+    header p {
+      margin: 0;
+      color: #D9F4E9;
+      font-size: 0.95rem;
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #FFFFFF;
+      background: #1B2A32;
+      border: 1px solid #2B3E48;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    nav a:hover { border-color: var(--primary); }
+    main {
+      padding: 1.5rem 1.25rem 3rem;
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.35rem;
+    }
+    h3 {
+      margin-top: 1.25rem;
+      font-size: 1.05rem;
+    }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.45rem; }
+    .meta {
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    .notice {
+      background: rgba(32, 167, 121, 0.12);
+      border-left: 4px solid var(--primary);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-size: 0.92rem;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>WifiMe — Network Intelligence</h1>
+      <p>Política de Privacidade • Privacy Policy (<code>com.wifime.app</code>)</p>
+      <nav aria-label="Idioma / Language">
+        <a href="#pt-br">Português (Brasil)</a>
+        <a href="#en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="pt-br" lang="pt-BR">
+      <h2>Política de Privacidade (Português — Brasil)</h2>
+      <p class="meta">Última atualização: 21 de novembro de 2026 • Aplicativo: WifiMe (<code>com.wifime.app</code>)</p>
+
+      <div class="notice">
+        O WifiMe é um aplicativo Android 100% gratuito, sem login, sem anúncios, sem SDKs de analytics e sem backend proprietário. Todos os diagnósticos são processados e armazenados localmente no seu dispositivo.
+      </div>
+
+      <h3>1. Dados Armazenados Localmente (Drift / SQLite)</h3>
+      <ul>
+        <li>Os resultados de benchmarks DNS, varreduras Wi-Fi manuais, avaliações de Network Score e configurações de tema/idioma são armazenados exclusivamente no banco SQLite local do aparelho (<code>wifime_local.sqlite</code>).</li>
+        <li>O WifiMe <strong>nunca</strong> solicita, lê ou armazena senhas de redes Wi-Fi.</li>
+        <li>Você pode excluir registros individuais ou apagar todo o histórico a qualquer momento na aba <strong>Histórico</strong> do aplicativo, ou desinstalar o app para remover integralmente os dados locais.</li>
+      </ul>
+
+      <h3>2. Permissões do Android</h3>
+      <ul>
+        <li><strong>Localização (<code>ACCESS_FINE_LOCATION</code> e <code>ACCESS_COARSE_LOCATION</code>) e Dispositivos Wi-Fi Próximos (<code>NEARBY_WIFI_DEVICES</code> no Android 13+)</strong>: solicitadas somente quando você toca explicitamente em <em>Escanear Redes Wi-Fi</em>. O Android exige essas permissões para listar redes Wi-Fi próximas (SSID, BSSID, RSSI, canal e frequência). O WifiMe <strong>não</strong> coleta, registra nem transmite coordenadas GPS.</li>
+        <li><strong>Rede e Wi-Fi (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_STATE</code>)</strong>: usadas para ler propriedades locais da interface de rede, disparar a varredura Wi-Fi manual e realizar testes DNS sob demanda.</li>
+        <li>O WifiMe atua exclusivamente em modo leitura/diagnóstico e <strong>nunca</strong> altera automaticamente configurações de Wi-Fi ou DNS do Android.</li>
+      </ul>
+
+      <h3>3. Comunicações Externas Sob Demanda</h3>
+      <ul>
+        <li><strong>Consultas DNS</strong>: ao iniciar o DNS Analyzer, o app envia consultas DNS padrão (UDP/TCP porta 53) para o domínio neutro de teste <code>example.com</code> diretamente aos servidores escolhidos por você (Google, Cloudflare, Quad9, OpenDNS, AdGuard ou servidor personalizado).</li>
+        <li><strong>Consulta Opcional de IP Público</strong>: executada somente quando você toca no botão de consulta na tela de Informações de IP, acessando <code>https://api64.ipify.org?format=json</code>.</li>
+        <li><strong>Apoie o WifiMe (Stripe)</strong>: desativado por padrão. Quando habilitado em builds autorizadas, apenas abre um link externo hospedado pela Stripe no navegador do dispositivo, sem coletar dados de cartão no app e sem conceder benefícios digitais.</li>
+      </ul>
+
+      <h3>4. Anúncios, Telemetria e Compartilhamento</h3>
+      <ul>
+        <li>Não exibimos anúncios e não utilizamos SDKs de rastreamento ou analytics.</li>
+        <li>Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros.</li>
+      </ul>
+
+      <h3>5. Contato e Suporte</h3>
+      <p>E-mail oficial de suporte e privacidade: <strong>[PENDENTE DE CONFIRMAÇÃO PELO RESPONSÁVEL LEGAL ANTES DA PUBLICAÇÃO]</strong>.</p>
+    </section>
+
+    <section id="en" lang="en">
+      <h2>Privacy Policy (English)</h2>
+      <p class="meta">Last updated: November 21, 2026 • Application: WifiMe (<code>com.wifime.app</code>)</p>
+
+      <div class="notice">
+        WifiMe is a 100% free Android app with no login, no ads, no analytics SDKs, and no proprietary backend. All diagnostics are processed and stored locally on your device.
+      </div>
+
+      <h3>1. Local Storage (Drift / SQLite)</h3>
+      <ul>
+        <li>DNS benchmarks, manual Wi-Fi scan sessions, Network Score diagnostics, and theme/language preferences are stored strictly locally on your device in SQLite (<code>wifime_local.sqlite</code>).</li>
+        <li>WifiMe <strong>never</strong> requests, reads, or stores Wi-Fi network passwords.</li>
+        <li>You can delete individual entries or clear all history at any time from the <strong>History</strong> tab, or uninstall the app to remove all local data.</li>
+      </ul>
+
+      <h3>2. Android Permissions</h3>
+      <ul>
+        <li><strong>Location (<code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code>) and Nearby Wi-Fi Devices (<code>NEARBY_WIFI_DEVICES</code> on Android 13+)</strong>: requested strictly on demand when you manually trigger a Wi-Fi scan, as required by Android to return nearby Wi-Fi scan results (SSID, BSSID, RSSI, channel, frequency). WifiMe <strong>never</strong> tracks, records, or transmits GPS coordinates.</li>
+        <li><strong>Network &amp; Wi-Fi State (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_STATE</code>)</strong>: used to read local network interface properties, trigger manual Wi-Fi scans, and perform user-initiated DNS benchmarks.</li>
+        <li>WifiMe operates in read-only diagnostic mode and <strong>never</strong> automatically modifies Android Wi-Fi or DNS settings.</li>
+      </ul>
+
+      <h3>3. User-Initiated External Requests</h3>
+      <ul>
+        <li><strong>DNS Queries</strong>: sends standard RFC 1035 DNS queries (UDP/TCP port 53) for the neutral test domain <code>example.com</code> directly to the DNS servers you select (Google, Cloudflare, Quad9, OpenDNS, AdGuard, or custom resolvers).</li>
+        <li><strong>Optional Public IP Lookup</strong>: executed only when you explicitly tap the lookup button in IP Information, querying <code>https://api64.ipify.org?format=json</code>.</li>
+        <li><strong>Support Project (Stripe)</strong>: disabled by default. When enabled in authorized builds, opens an external Stripe-hosted link in the device browser without collecting card details in-app or granting digital perks.</li>
+      </ul>
+
+      <h3>4. Ads, Tracking, and Data Sharing</h3>
+      <ul>
+        <li>No advertising SDKs, behavioral analytics, or hidden telemetry are included.</li>
+        <li>We do not sell, rent, or share personal data with third parties.</li>
+      </ul>
+
+      <h3>5. Contact &amp; Support</h3>
+      <p>Official support and privacy email: <strong>[PENDING CONFIRMATION BY LEGAL REPRESENTATIVE BEFORE PUBLICATION]</strong>.</p>
+    </section>
+  </main>
+
+  <footer>
+    WifiMe — Network Intelligence • 100% Free &amp; Privacy-First
+  </footer>
+</body>
+</html>
